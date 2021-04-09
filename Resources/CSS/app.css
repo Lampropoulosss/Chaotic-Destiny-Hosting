@@ -115,6 +115,15 @@ header h1 + p {
 	font-size: 1.3rem;
 }
 
+.typingp a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.typingp a:hover {
+	text-decoration: underline;
+}
+
 /* Nav Styles */
 
 nav {

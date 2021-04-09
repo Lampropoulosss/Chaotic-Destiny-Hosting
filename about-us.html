@@ -34,19 +34,46 @@
 
 	<style>
 
-		.typingp a {
-			color: #fff;
-			text-decoration: none;
+		#header {
+			color: gold;
+			text-align: center;
+			font-size: 2rem;
+			font-weight: 600;
+			margin: 40px 0;
 		}
 
-		.typingp a:hover {
-			text-decoration: underline;
+		.grid-container {
+			max-width: 95%;
+			margin: 50px auto;
+			display: grid;
+			grid-template-columns: 3fr 1fr;
+		}
+
+		.logo img {
+			width: 80%;
+			height: 80%;
+			border-radius: 5px;
+		}
+
+		.logo {
+			text-align: center;
 		}
 
 		.overlay {
 			width: 100%;
 			height: 100%;
 			background-color: rgba(45, 45, 45, 0.6);
+		}
+
+		main h3 {
+			color: #ff726f;
+			font-size: 1.4rem;
+			font-weight: 600;
+			margin: 20px auto;
+		}
+
+		main p {
+			font-size: 1.1rem;
 		}
 
 	</style>
@@ -169,15 +196,29 @@
 	<!-- Website Content -->
 
 	<main>
-		<h2>ABOUT US</h2>
-		<div class="mission">
-			<h3>OUR MISSION</h3>
-		</div>
-		<div class="story">
-			<h3>OUR STORY</h3>
-		</div>
-		<div class="team">
-			<h3>OUR TEAM</h3>
+		<h2 id="header">ABOUT US</h2>
+		<div class="grid-container">
+			<div>
+				<div class="mission">
+					<h3>OUR MISSION</h3>
+					<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Dolor nesciunt exercitationem fugit odio est? Tenetur et quisquam adipisci ad commodi.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptatem!</p>
+				</div>
+				<div class="story">
+					<h3>OUR STORY</h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur at, accusamus. Soluta quod omnis, sint molestiae distinctio numquam aperiam laborum reprehenderit nulla saepe, accusantium consectetur ea similique vel? Facilis laborum aperiam molestiae possimus qui eligendi, quo quasi et labore, libero quae omnis excepturi, nulla vel. Ad deserunt pariatur iusto, esse?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil magnam eligendi veniam id sed, consequuntur laboriosam debitis dignissimos harum optio quasi rem. Consequatur, nemo nisi eos, atque dignissimos neque tempora nam. Recusandae neque sapiente voluptatum expedita aspernatur id, eos assumenda beatae iure et, doloremque officia saepe autem. Similique, dolores, ad!</p>
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed eum laudantium esse voluptatum culpa quisquam ea molestias cumque eveniet saepe id reiciendis facilis fuga inventore recusandae voluptates, adipisci suscipit officia ad? Deserunt vitae reprehenderit aliquam minima veniam a, incidunt magni odio, aperiam ut inventore vel! Numquam eius fugiat vero?</p>
+				</div>
+				<div class="team">
+					<h3>OUR TEAM</h3>
+				</div>
+			</div>
+			<div>
+				<div class="logo">
+					<img src="https://cdn.discordapp.com/attachments/697076562193023027/737693167196831914/xd.png.jpg" alt="Chaotic Destiny Logo">
+				</div>
+			</div>
 		</div>
 
 	</main>
