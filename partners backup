@@ -24,7 +24,7 @@
 	<!-- Stylesheets -->
 
 	<link rel="stylesheet" href="Resources/CSS/app.css">
-
+	
 	<!-- External Stylesheets -->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -32,151 +32,108 @@
 	<!-- Other -->
 
 	<link rel="shortcut icon" type="image/x-icon" href="https://cdn.discordapp.com/attachments/697076562193023027/737693167196831914/xd.png.jpg">
-	<title>Chaotic Destiny | Contact</title>
+	<title>Chaotic Destiny | Partners</title>
 
 	<!-- Styles -->
 
-	<style type="text/css">
+	<style>
 
-		#header {
-			color: gold;
-			text-align: center;
-			font-size: 2rem;
-			font-weight: 600;
-			margin: 40px 0;
-		}
-
-		.grid-x1 {
-			display: grid;
-			grid-template-rows: 1fr;
-			align-content: space-between;
+		main {
+			margin-bottom: 50px;
 		}
 
 		.container {
-			max-width: 80%;
-			margin: 50px auto;
+			max-width: 1100px;
+		}
+
+		.grid-container {
+			max-width: 1100px;
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 2%;
+			margin: 0 auto;
 		}
 
-		.container .service {
+		header {
+			background-image: none !important;
+			height: auto !important;
+		}
+
+		header h1 {
+			padding-top: 50px;
+		}
+
+		header h1 + p {
+			max-width: 1000px;
+			width: auto;
+			font-size: 1.1rem;
+			margin-top: 30px;
+			padding: 0 20px;
+		}
+
+		.card {
 			text-align: center;
+			border-radius: 10px;
+			border: 2px solid rgb(255, 255, 255);
 		}
 
-		/*.container .service h3, .container .service p {
-			color: gold;
-		}*/
-
-		.service p {
-			margin-bottom: 30px;
+		.card-top, .card-top div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 135px;
+			border-bottom: 2px solid rgb(255, 255, 255);
 		}
 
-		.button-outline {
-			border-radius: 5px;
-			padding: 10px;
-			border: 2px solid #fff;
-			transition: border-color 0.5s;
+		.card-top img, .card-top div img {
+			height: 125px;
+			width: 125px;
+			border-radius: 10px;
+		}
+
+		.card-bottom {
+			display: grid;
+			grid-template-rows: 1fr;
+			align-content: space-between;
+			height: 200px;
+		}
+
+		.card-bottom h2 + p {
+			padding: 0 15px;
+		}
+
+		.card-bottom a {
 			text-decoration: none;
+			font-size: 1.1rem;
 			color: #fff;
-			display: inline-block;
+			padding: 10px;
+			border: 2px solid gold;
+			border-radius: 5px;
+			transition: border-color 0.5s ease-in-out;
 		}
 
-		.button-outline:hover {
+		.card-bottom p {
+			margin-bottom: 20px;
+		}
+
+		.card-bottom a:hover {
 			background-color: rgb(35, 35, 35);
-			transform: scale(0.98);
 			border-color: #ff726f;
 		}
 
 		.overlay {
-			width: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 10;
+			background-image: linear-gradient(to bottom left, rgba(255, 215, 0, 0), rgba(255, 215, 0, 0), rgba(255, 215, 0, 1));
 			height: 100%;
-			background-color: rgba(45, 45, 45, 0.6);
-		}
-
-		@media only screen and (max-width: 968px) {
-			.container {
-				grid-template-columns: 1fr;
-			}
-
-			.service {
-				margin-bottom: 30px;
-			}
+			width: 100%;
 		}
 
 	</style>
 
-	<!-- Scripts -->
-
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-	<script>
-		window.addEventListener('load', async (event) => {
-			let hide = false;
-			$(".icon").click(async function() {
-				if (!hide) {
-					$(".h1").hide();
-					$('.p').hide();
-					hide = true;
-				} else {
-					$(".h1").show();
-					$('.p').show();
-					hide = false;
-				}
-			})
-			var typed = new Typed('.typing', {
-				strings: [
-				'Discord Bot',
-				'Virtual Private Server',
-				'Minecraft Server',
-				],
-				stringsElement: null,
-				typeSpeed: 50,
-				startDelay: 0,
-				backSpeed: 50,
-				smartBackspace: true,
-				shuffle: false,
-				backDelay: 700,
-				fadeOut: false,
-				fadeOutClass: 'typed-fade-out',
-				fadeOutDelay: 500,
-				loop: true,
-				loopCount: Infinity,
-				showCursor: true,
-				cursorChar: '|',
-				autoInsertCss: true,
-				attr: null,
-				bindInputFocusEvents: false,
-				contentType: 'html',
-			})
-			var typed = new Typed('.typingp', {
-				strings: [
-				'<a href="">pricing page</a>',
-				'<a href="">billing page</a>',
-				'<a href="about-us.html">about us page</a>',
-				'<a href="">status page</a>',
-				],
-				stringsElement: null,
-				typeSpeed: 50,
-				startDelay: 0,
-				backSpeed: 50,
-				smartBackspace: true,
-				shuffle: false,
-				backDelay: 5000,
-				fadeOut: false,
-				fadeOutClass: 'typed-fade-out',
-				fadeOutDelay: 500,
-				loop: true,
-				loopCount: Infinity,
-				showCursor: true,
-				cursorChar: '|',
-				autoInsertCss: true,
-				attr: null,
-				bindInputFocusEvents: false,
-				contentType: 'html',
-			})
-		});
-	</script>
 </head>
+
 <body>
 
 	<!-- Navbar -->
@@ -214,48 +171,62 @@
 				<li><a><span class="login">Login</span></a></li>
 			</ul>
 		</nav>
-		<div class="overlay">
-			<h1 class="h1">We Host Your <span class="typing"></span></h1>
-			<p class="p">You're currently browsing our contact us page, try checking our <span class="typingp"></span></p>
-		</div>
+
+		<h1>Partners</h1>
+		<p>Chaotic Destiny has partnered with great people and companies to improve its quality. In this page you can find some info about our great partners</p>
+
 	</header>
 
-	<!-- Website Content -->
-
 	<main>
-		<h2 id="header">CONTACT US</h2>
-		<div class="container">
-			<div class="service grid-x1">
-				<div>
-					<i class="fas fa-users fa-5x"></i>
-					<h3>CLIENT AREA</h3>
-					<P>General support platform for billing, sales and all kinds of support.</P>
+
+		<div class="grid-container">
+			<div class="card">
+				<div class="card-top">
+					<div style="width: 100%; height: 100%; position: relative;">
+						<img src="https://images.pexels.com/photos/1337386/pexels-photo-1337386.jpeg?" alt="">
+						<div class="overlay"></div>
+					</div>
 				</div>
-				<div>
-					<a class="button-outline" href="https://billing.chaoticdestiny.host/submitticket.php" target="_blank">SUBMIT A TICKET</a>
-				</div>
-			</div>
-			<div class="service grid-x1">
-				<div>
-					<i class="fab fa-discord fa-5x"></i>
-					<h3>DISCORD</h3>
-					<p>Join our official Discord server!</p>
-				</div>
-				<div>
-					<a class="button-outline" href="https://discord.com/invite/xp6PgWGeb6" target="_blank">JOIN OUR DISCORD</a>
+				<div class="card-bottom">
+					<div>
+						<h2>Example 1</h2>
+						<p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Soluta, pariatur.</p>
+					</div>
+					<div>
+						<p><a href="" class="button">Check Them Out</a></p>
+					</div>
 				</div>
 			</div>
-			<div class="service grid-x1">
-				<div>
-					<i class="far fa-comment-dots fa-5x"></i>
-					<h3>LIVE CHAT</h3>
-					<p>For questions and small technical issues.</p>
+			<div class="card">
+				<div class="card-top">
+					<img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/512/minecraft-icon.png" alt="">
 				</div>
-				<div>
-					<a class="button-outline" href="">START A LIVE CHAT</a>
+				<div class="card-bottom">
+					<div>
+						<h2>Minecraft</h2>
+						<p>Minecraft is an exploring game which you can play both online and offline!</p>
+					</div>
+					<div class="test">
+						<p><a href="" class="button">Check Them Out</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-top">
+					<img src="https://images.pexels.com/photos/1337380/pexels-photo-1337380.jpeg" alt="">
+				</div>
+				<div class="card-bottom">
+					<div>
+						<h2>Example 3</h2>
+						<p>Lorem, ipsum dolor sit amet consectetur, adipisicing elit. Ipsum molestias sapiente expedita omnis quas nisi adipisci delectus assumenda mollitia atque.</p>
+					</div>
+					<div>
+						<p><a href="" class="button">Check Them Out</a></p>
+					</div>
 				</div>
 			</div>
 		</div>
+		
 	</main>
 
 	<!-- Footer -->
@@ -277,7 +248,7 @@
 				<a href="">Login</a> <!-- If we make one -->
 				<a href="">Register</a> <!-- If we make one -->
 				<a href="about-us.html">About us</a> <!-- The About us page I'll make -->
-				<a href="partners.html">Partners</a>
+				<a href="">Partners</a>
 			</div>
 			<div class="column">
 				<h2>Support</h2>
@@ -302,3 +273,4 @@
 
 </body>
 </html>
+</body>
