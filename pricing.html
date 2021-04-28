@@ -109,11 +109,6 @@
 			font-size: 1.2rem;
 		}
 
-		.grid-container hr {
-			width: 90%;
-			margin: 20px auto;
-		}
-
 		.grid-container .buy-now {
 			border-radius: 5px;
 			padding: 10px;
@@ -126,79 +121,148 @@
 			font-size: 1.2rem;
 		}
 
-	</style>
+		/* Line */
 
-	<!-- Scripts -->
+		.line {
+			height: 3px;
+			margin: 0 auto;
+			border: none;
+			border-radius: 10px;
+			width: 90%;
+			position: static;
+			background: linear-gradient(
+				124deg,
+				gold,
+				white,
+				#ff726f
+				);
+			background-size: 1000% 1000%;
 
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-	<script>
-		window.addEventListener('load', async (event) => {
-			let hide = false;
-			$(".icon").click(async function() {
-				if (!hide) {
-					$(".h1").hide();
-					$('.p').hide();
-					hide = true;
-				} else {
-					$(".h1").show();
-					$('.p').show();
-					hide = false;
-				}
-			})
-			var typed = new Typed('.typing', {
-				strings: [
-				'Discord Bot',
-				'Virtual Private Server',
-				'Minecraft Server',
-				],
-				stringsElement: null,
-				typeSpeed: 50,
-				startDelay: 0,
-				backSpeed: 50,
-				smartBackspace: true,
-				shuffle: false,
-				backDelay: 700,
-				fadeOut: false,
-				fadeOutClass: 'typed-fade-out',
-				fadeOutDelay: 500,
-				loop: true,
-				loopCount: Infinity,
-				showCursor: true,
-				cursorChar: '|',
-				autoInsertCss: true,
-				attr: null,
-				bindInputFocusEvents: false,
-				contentType: 'html',
-			})
-			var typed = new Typed('.typingp', {
-				strings: [
-				'<a href="contact.html">contact page</a>',
-				'<a href="">billing page</a>',
-				'<a href="about-us.html">about us page</a>',
-				'<a href="">status page</a>',
-				],
-				stringsElement: null,
-				typeSpeed: 50,
-				startDelay: 0,
-				backSpeed: 50,
-				smartBackspace: true,
-				shuffle: false,
-				backDelay: 5000,
-				fadeOut: false,
-				fadeOutClass: 'typed-fade-out',
-				fadeOutDelay: 500,
-				loop: true,
-				loopCount: Infinity,
-				showCursor: true,
-				cursorChar: '|',
-				autoInsertCss: true,
-				attr: null,
-				bindInputFocusEvents: false,
-				contentType: 'html',
-			})
-		});
-	</script>
+			-webkit-animation: rainbow 3s linear infinite;
+			-z-animation: rainbow 3s linear infinite;
+			-o-animation: rainbow 3s linear infinite;
+			animation: rainbow 3s linear infinite;
+		}
+
+		@-webkit-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@-moz-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@-o-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+	}
+
+</style>
+
+<!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script>
+	window.addEventListener('load', async (event) => {
+		let hide = false;
+		$(".icon").click(async function() {
+			if (!hide) {
+				$(".h1").hide();
+				$('.p').hide();
+				hide = true;
+			} else {
+				$(".h1").show();
+				$('.p').show();
+				hide = false;
+			}
+		})
+		var typed = new Typed('.typing', {
+			strings: [
+			'Discord Bot',
+			'Virtual Private Server',
+			'Minecraft Server',
+			],
+			stringsElement: null,
+			typeSpeed: 50,
+			startDelay: 0,
+			backSpeed: 50,
+			smartBackspace: true,
+			shuffle: false,
+			backDelay: 700,
+			fadeOut: false,
+			fadeOutClass: 'typed-fade-out',
+			fadeOutDelay: 500,
+			loop: true,
+			loopCount: Infinity,
+			showCursor: true,
+			cursorChar: '|',
+			autoInsertCss: true,
+			attr: null,
+			bindInputFocusEvents: false,
+			contentType: 'html',
+		})
+		var typed = new Typed('.typingp', {
+			strings: [
+			'<a href="contact.html">contact page</a>',
+			'<a href="">billing page</a>',
+			'<a href="about-us.html">about us page</a>',
+			'<a href="">status page</a>',
+			],
+			stringsElement: null,
+			typeSpeed: 50,
+			startDelay: 0,
+			backSpeed: 50,
+			smartBackspace: true,
+			shuffle: false,
+			backDelay: 5000,
+			fadeOut: false,
+			fadeOutClass: 'typed-fade-out',
+			fadeOutDelay: 500,
+			loop: true,
+			loopCount: Infinity,
+			showCursor: true,
+			cursorChar: '|',
+			autoInsertCss: true,
+			attr: null,
+			bindInputFocusEvents: false,
+			contentType: 'html',
+		})
+	});
+</script>
 </head>
 <body>
 
@@ -253,6 +317,7 @@
 			<div class="card">
 				<div class="card-top">
 					<h3>Minecraft Hosting</h3>
+					<hr class="line">
 					<p><i class="fas fa-globe"></i> NA Location</p>
 					<p><i class="fas fa-desktop"></i> Pterodactyl Panel</p>
 					<p><i class="fas fa-shield-alt"></i> DDoS Protection</p>
@@ -269,6 +334,7 @@
 			<div class="card">
 				<div class="card-top">
 					<h3>Discord Bot Hosting</h3>
+					<hr class="line">
 					<p><i class="fas fa-globe"></i> NA Location</p>
 					<p><i class="fas fa-desktop"></i> Pterodactyl Panel</p>
 					<p><i class="fas fa-shield-alt"></i> DDoS Protection</p>
@@ -284,6 +350,7 @@
 			<div class="card">
 				<div class="card-top">
 					<h3>VPS Hosting</h3>
+					<hr class="line">
 				</div>
 				<div class="card-bottom">
 					<a class="buy-now">Coming Soon</a>
