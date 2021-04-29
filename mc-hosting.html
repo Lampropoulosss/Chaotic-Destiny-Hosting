@@ -123,10 +123,27 @@
 			font-size: 1.2rem;
 		}
 
-		.grid-container .buy-now:hover {
+		.grid-container .buy-now:hover, .price-change button:hover {
 			background-color: rgb(35, 35, 35);
 			transform: scale(0.98);
 			border-color: #ff726f;
+		}
+
+		.price-change button {
+			cursor: pointer;
+			font-size: 1.2rem;
+			margin-right: 5px;
+			margin-bottom: 20px;
+			color: #fff;
+			background-color: transparent;
+			transition: border-color 0.5s;
+			border: 2px solid gold;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		.clicked {
+			border-color: #ff726f !important;
 		}
 
 	</style>
@@ -251,6 +268,14 @@
 	<main>
 
         <h2 class="main-heading"><span class="gold">M</span>inecraft <span class="gold">H</span>osting</h2>
+
+        <section class="price-change container">
+			<button class="clicked">Monthly</button>
+			<button>Quarterly</button>
+			<button>Semi-Annually</button>
+			<button>Annually</button>
+		</section>
+
         <section id="bot-hosting" class="grid-container">
 			
 			<div class="card">
@@ -269,7 +294,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>1.24$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -289,7 +314,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>1.96$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -309,7 +334,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>2.59$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -329,7 +354,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>3.23$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -349,7 +374,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>4.54$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -370,7 +395,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>5.85$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -390,7 +415,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>7.63$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -410,7 +435,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>8.85$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -430,7 +455,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>10.21$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -450,7 +475,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>11.89$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -470,7 +495,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>13.14$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
@@ -490,7 +515,7 @@
 				<div class="card-bottom">
 					<p>Starting from:</p>
 					<h4>15.28$ / Month</h4>
-					<a href="" target="_blank" class="buy-now">Buy Now</a>
+					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
 
