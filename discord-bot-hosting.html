@@ -124,27 +124,10 @@
 			font-size: 1.2rem;
 		}
 
-		.grid-container .buy-now:hover, .price-change button:hover {
+		.grid-container .buy-now:hover {
 			background-color: rgb(35, 35, 35);
 			transform: scale(0.98);
 			border-color: #ff726f;
-		}
-
-		.clicked {
-			border-color: #ff726f !important;
-		}
-
-		.price-change button {
-			cursor: pointer;
-			font-size: 1.2rem;
-			margin-right: 5px;
-			margin-bottom: 20px;
-			color: #fff;
-			background-color: transparent;
-			transition: border-color 0.5s;
-			border: 2px solid gold;
-			border-radius: 5px;
-			padding: 10px;
 		}
 
 		#recommended h3 {
@@ -161,6 +144,53 @@
 			-webkit-user-drag: none;
 			-webkit-user-select: none;
 			-ms-user-select: none;
+		}
+
+		.slider-container {
+			width: 50%;
+			margin-bottom: 15px;
+		}
+
+		.plan {
+			margin: 10px auto;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+		}
+
+		.slider {
+			border-radius: 10px;
+			-webkit-appearance: none;
+			appearance: none;
+			width: 70%;
+			height: 25px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.8;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+
+		.slider:hover {
+			opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 20px;
+			height: 20px;
+			background: gold;
+			cursor: pointer;
+			border-radius: 10px;
+		}
+
+		.slider::-moz-range-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 20px;
+			height: 20px;
+			background: gold;
+			cursor: pointer;
 		}
 
 	</style>
@@ -286,15 +316,13 @@
 
 		<h2 class="main-heading"><span class="gold">D</span>iscord <span class="gold">B</span>ot <span class="gold">H</span>osting</h2>
 
-		<section class="price-change container">
-			<button class="clicked">Monthly</button>
-			<button>Quarterly</button>
-			<button>Semi-Annually</button>
-			<button>Annually</button>
+		<section class="slider-container container">
+			<p><span class="plan"></span></p>
+			<input type="range" min="0" max="200" value="2" class="slider" id="slider">
 		</section>
 
 		<section id="bot-hosting" class="grid-container">
-			
+
 			<div class="card">
 				<div class="card-top">
 					<h3>Tiny Bot Hosting</h3>
