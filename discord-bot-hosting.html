@@ -264,6 +264,38 @@
 				bindInputFocusEvents: false,
 				contentType: 'html',
 			})
+			const slider = document.getElementById("slider");
+			slider.oninput = function() {
+				if (this.value == 1) {
+					document.getElementById('tbh').innerText = '1.00$ / Month';
+					document.getElementById('sbh').innerText = '1.75$ / Month';
+					document.getElementById('mbh').innerText = '2.69$ / Month';
+					document.getElementById('lbh').innerText = '3.13$ / Month';
+					document.getElementById('ebh').innerText = '4.44$ / Month';
+					document.getElementById('cbh').innerText = '7.71$ / Month';
+				} else if (this.value == 2) {
+					document.getElementById('tbh').innerText = '2.74$ / Quaterly';
+					document.getElementById('sbh').innerText = '4.81$ / Quaterly';
+					document.getElementById('mbh').innerText = '7.40$ / Quaterly';
+					document.getElementById('lbh').innerText = '8.62$ / Quaterly';
+					document.getElementById('ebh').innerText = '12.20$ / Quaterly';
+					document.getElementById('cbh').innerText = '21.19$ / Quaterly';
+				} else if (this.value == 3) {
+					document.getElementById('tbh').innerText = '5.48$ / Semi-Anually';
+					document.getElementById('sbh').innerText = '9.62$ / Semi-Anually';
+					document.getElementById('mbh').innerText = '14.80$ / Semi-Anually';
+					document.getElementById('lbh').innerText = '17.24$ / Semi-Anually';
+					document.getElementById('ebh').innerText = '24.39$ / Semi-Anually';
+					document.getElementById('cbh').innerText = '42.39$ / Semi-Anually';
+				} else {
+					document.getElementById('tbh').innerText = '10.96$ / Anually';
+					document.getElementById('sbh').innerText = '19.24$ / Anually';
+					document.getElementById('mbh').innerText = '29.60$ / Anually';
+					document.getElementById('lbh').innerText = '34.47$ / Anually';
+					document.getElementById('ebh').innerText = '48.79$ / Anually';
+					document.getElementById('cbh').innerText = '84.77$ / Anually';
+				}
+			}
 		});
 	</script>
 </head>
@@ -318,7 +350,7 @@
 
 		<section class="slider-container container">
 			<p><span class="plan"></span></p>
-			<input type="range" min="0" max="200" value="2" class="slider" id="slider">
+			<input type="range" min="1" max="4" value="1" class="slider" id="slider">
 		</section>
 
 		<section id="bot-hosting" class="grid-container">
@@ -339,7 +371,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>1.00$ / Month</h4>
+					<h4 id='tbh'>1.00$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
@@ -360,7 +392,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>1.75$ / Month</h4>
+					<h4 id='sbh'>1.75$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
@@ -381,7 +413,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>2.69$ / Month</h4>
+					<h4 id='mbh'>2.69$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
@@ -403,7 +435,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>3.13$ / Month</h4>
+					<h4 id='lbh'>3.13$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
@@ -424,7 +456,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>4.44$ / Month</h4>
+					<h4 id='ebh'>4.44$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
@@ -445,7 +477,7 @@
 				</div>
 				<div class="card-bottom">
 					<p>Starting from:</p>
-					<h4>7.71$ / Month</h4>
+					<h4 id='cbh'>7.71$ / Month</h4>
 					<a draggable="false" href="" target="_blank" class="buy-now">Buy Now</a>
 				</div>
 			</div>
