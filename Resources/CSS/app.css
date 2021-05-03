@@ -249,10 +249,6 @@ footer .column {
 	line-height: 1.8rem;
 }
 
-footer .copyright {
-	/*grid-column: 1 / span 2;*/
-}
-
 footer a {
 	display: block;
 	text-decoration: none;
