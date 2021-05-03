@@ -77,7 +77,8 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			justify-content: center;
-			grid-gap: 4%;
+			grid-column-gap: 4%;
+    		grid-row-gap: 2%;
 			margin: 0 auto;
 		}
 
@@ -141,7 +142,7 @@
 			margin-bottom: 15px;
 		}
 
-		.plan {
+		#plan {
 			margin: 10px auto;
 			font-size: 1.3rem;
 			text-transform: uppercase;
@@ -256,6 +257,7 @@
 			const slider = document.getElementById("slider");
 			slider.oninput = function () {
 				if (this.value == 1) {
+					document.getElementById('plan').innerText = 'Monthly';
 					document.getElementById('mp1').innerText = '1.24$ / Month';
 					document.getElementById('mp2').innerText = '1.96$ / Month';
 					document.getElementById('mp3').innerText = '2.59$ / Month';
@@ -269,6 +271,7 @@
 					document.getElementById('mp11').innerText = '13.14$ / Month';
 					document.getElementById('mp12').innerText = '15.28$ / Month';
 				} else if (this.value == 2) {
+					document.getElementById('plan').innerText = 'Quaterly';
 					document.getElementById('mp1').innerText = '3.40$ / Quaterly';
 					document.getElementById('mp2').innerText = '5.38$ / Quaterly';
 					document.getElementById('mp3').innerText = '7.13$ / Quaterly';
@@ -282,6 +285,7 @@
 					document.getElementById('mp11').innerText = '36.13$ / Quaterly';
 					document.getElementById('mp12').innerText = '42.02$ / Quaterly';
 				} else if (this.value == 3) {
+					document.getElementById('plan').innerText = 'Semi-Anually';
 					document.getElementById('mp1').innerText = '6.80$ / Semi-Anually';
 					document.getElementById('mp2').innerText = '10.76$ / Semi-Anually';
 					document.getElementById('mp3').innerText = '14.26$ / Semi-Anually';
@@ -295,6 +299,7 @@
 					document.getElementById('mp11').innerText = '72.27$ / Semi-Anually';
 					document.getElementById('mp12').innerText = '84.03$ / Semi-Anually';
 				} else {
+					document.getElementById('plan').innerText = 'Anually';
 					document.getElementById('mp1').innerText = '13.60$ / Anually';
 					document.getElementById('mp2').innerText = '21.52$ / Anually';
 					document.getElementById('mp3').innerText = '28.52$ / Anually';
@@ -364,7 +369,7 @@
 		<h2 class="main-heading"><span class="gold">M</span>inecraft <span class="gold">H</span>osting</h2>
 
 		<section class="slider-container container">
-			<p><span class="plan"></span></p>
+			<p><span id="plan">Monthly</span></p>
 			<input type="range" min="1" max="4" value="1" class="slider" id="slider">
 		</section>
 

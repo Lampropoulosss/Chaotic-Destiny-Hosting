@@ -151,7 +151,7 @@
 			margin-bottom: 15px;
 		}
 
-		.plan {
+		#plan {
 			margin: 10px auto;
 			font-size: 1.3rem;
 			text-transform: uppercase;
@@ -267,6 +267,7 @@
 			const slider = document.getElementById("slider");
 			slider.oninput = function() {
 				if (this.value == 1) {
+					document.getElementById('plan').innerText = 'Monthly';
 					document.getElementById('tbh').innerText = '1.00$ / Month';
 					document.getElementById('sbh').innerText = '1.75$ / Month';
 					document.getElementById('mbh').innerText = '2.69$ / Month';
@@ -274,6 +275,7 @@
 					document.getElementById('ebh').innerText = '4.44$ / Month';
 					document.getElementById('cbh').innerText = '7.71$ / Month';
 				} else if (this.value == 2) {
+					document.getElementById('plan').innerText = 'Quaterly';
 					document.getElementById('tbh').innerText = '2.74$ / Quaterly';
 					document.getElementById('sbh').innerText = '4.81$ / Quaterly';
 					document.getElementById('mbh').innerText = '7.40$ / Quaterly';
@@ -281,6 +283,7 @@
 					document.getElementById('ebh').innerText = '12.20$ / Quaterly';
 					document.getElementById('cbh').innerText = '21.19$ / Quaterly';
 				} else if (this.value == 3) {
+					document.getElementById('plan').innerText = 'Semi-Anually';
 					document.getElementById('tbh').innerText = '5.48$ / Semi-Anually';
 					document.getElementById('sbh').innerText = '9.62$ / Semi-Anually';
 					document.getElementById('mbh').innerText = '14.80$ / Semi-Anually';
@@ -288,6 +291,7 @@
 					document.getElementById('ebh').innerText = '24.39$ / Semi-Anually';
 					document.getElementById('cbh').innerText = '42.39$ / Semi-Anually';
 				} else {
+					document.getElementById('plan').innerText = 'Anually';
 					document.getElementById('tbh').innerText = '10.96$ / Anually';
 					document.getElementById('sbh').innerText = '19.24$ / Anually';
 					document.getElementById('mbh').innerText = '29.60$ / Anually';
@@ -349,7 +353,7 @@
 		<h2 class="main-heading"><span class="gold">D</span>iscord <span class="gold">B</span>ot <span class="gold">H</span>osting</h2>
 
 		<section class="slider-container container">
-			<p><span class="plan"></span></p>
+			<p><span id="plan">Monthly</span></p>
 			<input type="range" min="1" max="4" value="1" class="slider" id="slider">
 		</section>
 
