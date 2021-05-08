@@ -42,6 +42,10 @@
 			padding: 5% 0;
 		}
 
+		footer {
+			margin-top: 30px;
+		}
+
 		.whyCDH > h2 {
 			color: gold;
 			font-weight: 600;
@@ -72,10 +76,160 @@
 			background-color: rgba(45, 45, 45, 0.6);
 		}
 
+		.pricing .grid-container {
+			max-width: 1100px;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: center;
+			grid-gap: 4%;
+			margin: 0 auto;
+		}
+
+		.pricing .grid-container .card {
+			border: 3px solid gold;
+			border-radius: 10px;
+			height: 400px;
+			display: grid;
+			align-content: space-between;
+			text-align: center;
+			transition: transform 250ms ease-in-out, border-color 250ms ease-in-out;
+		}
+
+		.pricing .grid-container .buy-now:hover {
+			background-color: rgb(35, 35, 35);
+			transform: scale(0.98);
+			border-color: #ff726f;
+			cursor: pointer;
+		}
+
+		.pricing .grid-container .card:hover {
+			transform: translateY(-10px);
+			border-color: #ff726f;
+		}
+
+		.pricing .grid-container .card .card-top h3 {
+			font-size: 1.5rem;
+			margin: 15px 0;
+		}
+
+		.pricing .grid-container .card .card-bottom h4 {
+			margin-bottom: 20px;
+			font-size: 1.2rem;
+		}
+
+		.pricing .grid-container .buy-now {
+			border-radius: 5px;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 2px solid gold;
+			transition: border-color 0.5s;
+			text-decoration: none;
+			color: #fff;
+			display: inline-block;
+			font-size: 1.2rem;
+		}
+
+		.pricing .line1 {
+			width: 184px;
+		}
+
+		.pricing .line2 {
+			width: 210px;
+		}
+
+		.pricing .line3 {
+			width: 135px;
+		}
+
+		/* Line */
+
+		.pricing .line {
+			height: 1px;
+			margin: 0 auto;
+			margin-bottom: 30px;
+			border: none;
+			border-radius: 10px;
+			position: static;
+			background: linear-gradient(124deg, gold, white, #ff726f);
+			background-size: 1000% 1000%;
+
+			-webkit-animation: rainbow 3s linear infinite;
+			-z-animation: rainbow 3s linear infinite;
+			-o-animation: rainbow 3s linear infinite;
+			animation: rainbow 3s linear infinite;
+		}
+
+		@-webkit-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@-moz-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@-o-keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+		@keyframes rainbow {
+			0% {
+				background-position: 0% 82%;
+			}
+			50% {
+				background-position: 100% 19%;
+			}
+			100% {
+				background-position: 0% 82%;
+			}
+		}
+
+		@media only screen and (max-width: 968px) {
+
+			.pricing .grid-container {
+				display: block;
+			}
+
+			.pricing .card {
+				width: 90%;
+				margin: 30px auto;
+			}
+
+			footer {
+				margin-top: 20px;
+			}
+		}
+
 	</style>
 
 	<!-- Scripts -->
 
+	<script> 
+		$(function(){
+			$("#nav").load("https://chaoticdestiny.host/Resources/Other/NavigationBar.html"); 
+			$("#footer").load("https://chaoticdestiny.host/Resources/Other/Footer.html"); 
+		});
+	</script> 
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 	<script>
@@ -126,38 +280,7 @@
 	<!-- Navbar -->
 
 	<header>
-		<nav>
-			<div class="logo">Chaotic Destiny</div>
-			<label for="button" class="icon"><i class="fas fa-bars"></i></label>
-			<input type="checkbox" id="button">
-			<ul class="left">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about-us.html">About us</a></li>
-			</ul>
-			<ul>
-				<li><a href="contact.html">Contact</a></li>
-				<li>
-					<label for="button-2" class="show">Order Now <i class="fa fa-caret-down"></i></label>
-					<a>Order Now <i class="fa fa-caret-down"></i></a>
-					<input type="checkbox" id="button-2">
-					<ul>
-						<li><a href="mc-hosting.html">Minecraft Hosting</a></li>
-						<li><a href="discord-bot-hosting.html">Discord Bot Hosting</a></li>
-						<li><a href="vps-hosting.html">Virtual Server Hosting</a></li>
-					</ul>
-				</li>
-				<li>
-					<label for="button-3" class="show">Billing <i class="fa fa-caret-down"></i></label>
-					<a>Billing <i class="fa fa-caret-down"></i></a>
-					<input type="checkbox" id="button-3">
-					<ul>
-						<li><a href="">Technical</a></li>
-						<li><a href="pricing.html">Payment</a></li>
-					</ul>
-				</li>
-				<li><a><span class="login">Login</span></a></li>
-			</ul>
-		</nav>
+		<div id="nav"></div>
 		<div class="overlay">
 			<h1 class="h1"><span class="typing"></span></h1>
 			<p class="p">Stop spending loads of money on hosts with downtime and lag, when you can spend a low amount on our lag free and 99% uptime hosting.</p>
@@ -191,8 +314,54 @@
 					<p>Service Uptime is also one of our top priorities. We will try to keep your service online no matter what costs.</p>
 				</div>
 				<div>
-					<h3>We need to add somethign here</h3>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, dolorum.</p>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="pricing">
+			<div class="grid-container">
+				<div class="card">
+					<div class="card-top">
+						<h3>Minecraft Hosting</h3>
+						<hr class="line line1">
+						<p><i class="fas fa-globe"></i> NA Location</p>
+						<p><i class="fas fa-desktop"></i> Pterodactyl Panel</p>
+						<p><i class="fas fa-shield-alt"></i> DDoS Protection</p>
+						<p><i class="fas fa-infinity"></i> Unlimited Slots</p>
+						<p><i class="fas fa-database"></i> Free Databases / Backups</p>
+						<p><i class="fas fa-folder"></i> SFTP Access</p>
+						<p><i class="fas fa-ticket-alt"></i> 24 / 7 Support</p>
+					</div>
+					<div class="card-bottom">
+						<a href="mc-hosting.html" class="buy-now">View Plans</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-top">
+						<h3>Discord Bot Hosting</h3>
+						<hr class="line line2">
+						<p><i class="fas fa-globe"></i> NA Location</p>
+						<p><i class="fas fa-desktop"></i> Pterodactyl Panel</p>
+						<p><i class="fas fa-shield-alt"></i> DDoS Protection</p>
+						<p><i class="fas fa-database"></i> Free Databases / Backups</p>
+						<p><i class="fas fa-folder"></i> SFTP Access</p>
+						<p><i class="fas fa-ticket-alt"></i> 24 / 7 Support</p>
+					</div>
+					<div class="card-bottom">
+						<a href="discord-bot-hosting.html" class="buy-now">View Plans</a>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-top">
+						<h3>VPS Hosting</h3>
+						<hr class="line line3">
+					</div>
+					<div class="card-bottom">
+						<a class="buy-now">Coming Soon</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -201,45 +370,7 @@
 
 	<!-- Footer -->
 
-	<footer>
-		<div class="grid">
-			<div class="copyright">
-				<h1>Chaotic Destiny</h1>
-				<p>Copyright &copy; 2020 - 2021</p>
-			</div>
-			<div class="column">
-				<h2>Services</h2>
-				<a href="https://billing.chaoticdestiny.host/index.php?rp=/store/minecraft-hosting" target="_blank">Minecraft Hosting</a>
-				<a href="https://billing.chaoticdestiny.host/index.php?rp=/store/discord-bot-monthly" target="_blank">Discord Bot Hosting</a>
-				<a href="">VPS Hosting</a>
-			</div>
-			<div class="column">
-				<h2>Clients</h2>
-				<a href="">Login</a>
-				<a href="">Register</a>
-				<a href="about-us.html">About us</a>
-				<a href="partners.html">Partners</a>
-			</div>
-			<div class="column">
-				<h2>Support</h2>
-				<a href="contact.html">Contact us</a>
-				<a href="">Support Discord</a>
-				<a href="">Status Page</a>
-				<a href="">Apply</a>
-			</div>
-			<div class="column">
-				<h2>Legal</h2>
-				<a href="terms-of-service.html">Terms of Service</a>
-				<a href="privacy-policy.html">Privacy Policy</a>
-				<a href="https://www.trustpilot.com/review/chaoticdestiny.host" target="_blank">Reviews</a>
-			</div>
-		</div>
-		<div class="footer-social">
-			<a href="https://twitter.com/chaotichosting" target="_blank">Twitter <i class="fab fa-twitter"></i></a>
-			<a href="https://discord.chaoticdestiny.host" target="_blank">Discord <i class="fab fa-discord"></i></a>
-			<a href="mailto:support@chaoticdestiny.host" target="_blank">support@chaoticdestiny.host <i class="far fa-envelope"></i></a>
-		</div>
-	</footer>
+	<div id="footer"></div>
 
 	<!--Start of Tawk.to Script-->
 	<script type="text/javascript">
