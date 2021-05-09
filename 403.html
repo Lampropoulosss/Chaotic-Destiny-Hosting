@@ -61,7 +61,13 @@
 	<!-- Scripts -->
 
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script> 
+		$(function(){
+			$("#nav").load("https://lampropoulosss.github.io/Chaotic-Destiny-Hosting/Resources/Other/NavigationBar.html"); 
+			$("#footer").load("https://lampropoulosss.github.io/Chaotic-Destiny-Hosting/Resources/Other/Footer.html"); 
+		});
+	</script>
 	<script>
 		window.addEventListener('load', async (event) => {
 			let hide = false;
@@ -108,38 +114,7 @@
 	<!-- Navbar -->
 
 	<header>
-		<nav>
-			<div class="logo">Chaotic Destiny</div>
-			<label for="button" class="icon"><i class="fas fa-bars"></i></label>
-			<input type="checkbox" id="button">
-			<ul class="left">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about-us.html">About us</a></li>
-			</ul>
-			<ul>
-				<li><a href="contact.html">Contact</a></li>
-				<li>
-					<label for="button-2" class="show">Order Now <i class="fa fa-caret-down"></i></label>
-					<a>Order Now <i class="fa fa-caret-down"></i></a>
-					<input type="checkbox" id="button-2">
-					<ul>
-						<li><a href="mc-hosting.html">Minecraft Hosting</a></li>
-						<li><a href="discord-bot-hosting.html">Discord Bot Hosting</a></li>
-						<li><a href="vps-hosting.html">Virtual Server Hosting</a></li>
-					</ul>
-				</li>
-				<li>
-					<label for="button-3" class="show">Billing <i class="fa fa-caret-down"></i></label>
-					<a>Billing <i class="fa fa-caret-down"></i></a>
-					<input type="checkbox" id="button-3">
-					<ul>
-						<li><a href="">Technical</a></li>
-						<li><a href="pricing.html">Payment</a></li>
-					</ul>
-				</li>
-				<li><a><span class="login">Login</span></a></li>
-			</ul>
-		</nav>
+		<div id="nav"></div>
 		<div class="overlay">
 			<h1 class="h1">403</span></h1>
 			<p class="p"><span class="typing"></p>
@@ -148,45 +123,7 @@
 
 		<!-- Footer -->
 
-		<footer>
-			<div class="grid">
-				<div class="copyright">
-					<h1>Chaotic Destiny</h1>
-					<p>Copyright &copy; 2020 - 2021</p>
-				</div>
-				<div class="column">
-					<h2>Services</h2>
-					<a href="https://billing.chaoticdestiny.host/index.php?rp=/store/minecraft-hosting" target="_blank">Minecraft Hosting</a>
-					<a href="https://billing.chaoticdestiny.host/index.php?rp=/store/discord-bot-monthly" target="_blank">Discord Bot Hosting</a>
-					<a href="">VPS Hosting</a>
-				</div>
-				<div class="column">
-					<h2>Clients</h2>
-					<a href="">Login</a>
-					<a href="">Register</a>
-					<a href="about-us.html">About us</a>
-					<a href="partners.html">Partners</a>
-				</div>
-				<div class="column">
-					<h2>Support</h2>
-					<a href="contact.html">Contact us</a>
-					<a href="">Support Discord</a>
-					<a href="">Status Page</a>
-					<a href="">Apply</a>
-				</div>
-				<div class="column">
-					<h2>Legal</h2>
-					<a href="terms-of-service.html">Terms of Service</a>
-					<a href="privacy-policy.html">Privacy Policy</a>
-					<a href="https://www.trustpilot.com/review/chaoticdestiny.host" target="_blank">Reviews</a>
-				</div>
-			</div>
-			<div class="footer-social">
-				<a href="https://twitter.com/chaotichosting" target="_blank">Twitter <i class="fab fa-twitter"></i></a>
-				<a href="https://discord.chaoticdestiny.host" target="_blank">Discord <i class="fab fa-discord"></i></a>
-				<a href="mailto:support@chaoticdestiny.host" target="_blank">support@chaoticdestiny.host <i class="far fa-envelope"></i></a>
-			</div>
-		</footer>
+		<div id="footer"></div>
 
 		<!--Start of Tawk.to Script-->
 		<script type="text/javascript">
